@@ -1,0 +1,80 @@
+Objetos Fundamentais
+
+Blobs = Guarda o conteudo do arquivo encriptado SHA1
+Trees = Aponta para as blobs ou para outras trees
+Commits = guarda os meta dados do arquivo encriptado
+
+
+Chaves SSH e Tokens
+
+Uma forma de estabelecer uma conexão segura e encriptada entre duas máquinas.
+
+Rodar no terminal CLI para criar a chave publica e privada
+
+ssh-keygen -t ed25519 -C mateusluizgonzaga@gmail.com.br
+
+Após isso, ir no Github e adicionar a chave SSH gerada.
+
+Inicializar agente de encriptação:  eval $(ssh-agent -s)
+Passar a chave privada para o agente: ssh-add id_ed25519
+
+________________________________________________________
+
+Inicializando o primeiro projeto com o GIT
+
+Dentro do diretório onde esta os arquivos: 
+git  init (Inicializa o repositório)
+
+Configurações basicas do projeto: git config --global user.email "mateusluizgonzaga@gmail.com"
+git config --global user.name "Mateus"
+
+________________________________________________________
+
+Primeiro Commit
+
+git add*
+git commit -m "nome do commit ou identificador"
+
+
+Ciclo de um arquivo no GIT
+
+
+git init (Inicializa o repositório)
+
+untracked (O git ainda não sabe da existencia do arquivo)
+
+git add * (adiciona todos os  arquivos ao git)
+
+unmodified (O arquivo ainda não foi modificado)
+modified (O arquivo foi editado)
+staged (estagio de espera para alguma ação, assim que o arquivo é  adicionado pelo "git add" ele ja vai para essa área).
+
+commit (reune todas as modificações dentro do arquivo e salva com alguma descrição da modificação e  retorna o arquivo para unmodified)
+
+________________________________________________________
+git status (verifica o status dos arquivos, ex: unmodified, modified e etc).
+________________________________________________________
+
+
+Editar as informações iniciais do git
+
+git config --list (verifica as informações que ja foram setadas
+
+git config --global --unset user.email (altera o email)
+
+git config --global --unset user.name (altera o nome)
+
+________________________________________________________
+
+Apontar o repositorio local para o remoto
+
+git remote add origin "url do repositorio aqui"
+
+
+
+
+
+
+
+
+
